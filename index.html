@@ -6,9 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel=stylesheet type="text/css" href="css/style.css">
-    <script src="js/main.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 <body>
     <p id="alertX"></p>
 </body>
+    <script>window.onload = function () {
+    var alertX = document.querySelector(`#alertX`);
+    if ((!navigator.getUserMedia) && (!navigator.mediaDevices.getUserMedia)) {
+        alertX.textContent = `no`;
+    } else {
+        alertX.textContent = `yes`;
+    }
+    alertX.textContent += navigator.userAgent;
+}
+        </script>
 </html>
