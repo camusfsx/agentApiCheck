@@ -7,3 +7,5 @@ window.onload = function () {
     }
     alertX.textContent += navigator.userAgent;
 }
+window.alert(`JSrun`)
+window.document.write(`JSrun`)
